@@ -11,14 +11,26 @@
     <h1>Favourite Bands</h1>
     <div class="form-container">
       <form id="add-bands-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" />
-        <label for="lead">Lead Member:</label>
-        <input type="text" id="lead" />
-        <label for="genre">Genre:</label>
-        <input type="text" id="genre" />
+        <div class="form-question-containter">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+          <label for="lead">Lead Member:</label>
+          <input type="text" id="lead" />
+          <label for="genre">Genre:</label>
+          <input type="text" id="genre" />
+          <label for="favourite">All time Favourite</label>
+          <input name="favourite" type="radio" id="favourite" value="true" />
+          <label for="favourite">Regular Favourite</label>
+          <input
+            name="favourite"
+            type="radio"
+            id="hidden"
+            value="false"
+            checked="checked"
+          />
+        </div>
         <input type="submit" id="submit-input" />
-        <button type="reset">Delete All!</button>
+        <button type="reset" id="delete">Delete All!</button>
       </form>
     </div>
     <h2>List of Added Bands</h2>

@@ -8,35 +8,32 @@ document.addEventListener("DOMContentLoaded", () => {
     console.dir(formElement);
     const formList = document.querySelector("#band-list");
     const newListItem = document.createElement("li");
-    const newDivName = document.createElement("div");
-    const newDivLead = document.createElement("div");
-    const newDivGerne = document.createElement("div");
 
+    let allTime;
     const bandName = this.name.value;
     const bandLead = this.lead.value;
     const bandGenre = this.genre.value;
+    const favourite = this.favourite.value;
 
-    console.dir(newDivGerne);
+    if (favourite === "true") {
+      allTime = "it was true";
+    } else {
+      allTime = "it was not true";
+    }
 
-    newListItem.textContent = `${bandName} ${bandLead} ${bandGenre}`;
+    newListItem.textContent = `${bandName} ${bandLead} ${bandGenre} ${allTime}`;
     formList.appendChild(newListItem);
     formElement.reset();
   };
   formElement.addEventListener("submit", handleFormSubmit);
+
+  const handleDelete = function() {
+    formList = document.querySelector("ul");
+    formList.innerHTML = "";
+  };
+  const deleteElement = document.querySelector("#delete");
+  deleteElement.addEventListener("click", handleDelete);
 });
-
-// const formElement = document.querySelector("#new-item-form");
-
-// const handleFormSubmit = function(event) {
-//   event.preventDefault();
-//   const formList = document.querySelector("#reading-list");
-//   const newListItem = document.createElement("li");
-
-//   newListItem.textContent = `${event.target.title.value} ${event.target.author.value} ${event.target.category.value}`;
-//   formList.appendChild(newListItem);
-//   formElement.reset();
-// };
-// formElement.addEventListener("submit", handleFormSubmit);
 
 // const handleReset = function() {
 //   formList = document.querySelector("ul");
