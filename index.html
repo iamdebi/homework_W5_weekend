@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Favourite Bands</title>
   </head>
   <body>
-    <h1>Favourite Bands</h1>
+    <h1 class="header">Favourite Bands</h1>
     <div class="form-container">
       <form id="add-bands-form">
         <div class="form-question-containter">
@@ -20,8 +25,9 @@
           <input type="text" id="genre" />
           <label for="favourite">All time Favourite</label>
           <input name="favourite" type="radio" id="favourite" value="true" />
-          <label for="favourite">Regular Favourite</label>
+          <label class="hidden" for="favourite">Regular Favourite</label>
           <input
+            class="hidden"
             name="favourite"
             type="radio"
             id="hidden"
@@ -29,11 +35,22 @@
             checked="checked"
           />
         </div>
-        <input type="submit" id="submit-input" />
-        <button type="reset" id="delete">Delete All!</button>
+        <div class="button-container">
+          <input class="button" type="submit" id="submit-input" />
+          <button class="button" type="reset" id="delete">Delete All!</button>
+        </div>
       </form>
     </div>
-    <h2>List of Added Bands</h2>
-    <ul id="band-list"></ul>
+    <h2 class="header">List of Added Bands</h2>
+    <div class="lists">
+      <div class="band-list">
+        <h3>Favourite Bands</h3>
+        <ul id="band-list"></ul>
+      </div>
+      <div class="favourite-list">
+        <h3>All Time Favourite Bands</h3>
+        <ul id="band-list-fav"></ul>
+      </div>
+    </div>
   </body>
 </html>
