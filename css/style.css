@@ -8,6 +8,11 @@ li {
   list-style: none;
 }
 
+input {
+  border: 2px solid firebrick;
+  border-radius: 10px;
+}
+
 .header {
   align-self: center;
 }
@@ -33,6 +38,11 @@ li {
 }
 
 .button {
-  border: 2px solid brown;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+}
+
+.favourite {
+  border: 2px solid firebrick;
   border-radius: 10px;
 }
